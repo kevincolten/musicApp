@@ -20,6 +20,7 @@ class ArtistsController < ApplicationController
     end
 
     def show
+        @artist = Artist.includes(:albums).includes(:tracks).find(params[:id])
     end
 
     def destroy

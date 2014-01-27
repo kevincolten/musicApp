@@ -1,0 +1,9 @@
+<h1>Add Album</h1>
+
+<form action="<%= artist_albums_url(@artist) %>" method="POST">
+    <label for="album-name">Album Name</label>
+    <input type="text" id="album-name" name="album[name]">
+    <label for="album-year">Year</label>
+    <input type="text" id="album-year" name="album[year]">
+    <input type="submit" value='submit'>
+</form>
