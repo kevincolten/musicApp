@@ -5,9 +5,12 @@ class ArtistsController < ApplicationController
     end
 
     def new
+        render :new
     end
 
     def create
+        Artist.create!(params[:artist])
+        redirect_to artists_url
     end
 
     def edit
