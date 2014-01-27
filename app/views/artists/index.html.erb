@@ -1,0 +1,22 @@
+<h1>Artists</h1>
+
+<ul>
+    <% @artists.each do |artist| %>
+        <li><%= artist.name %></li>
+            <ul>
+                <% artist.albums.each do |album| %>
+                    <li> <%= album.name %> </li>
+                    <ul>
+                        <% album.tracks.each do |track| %>
+                            <li>
+                                <%= track.name %>
+                                <% if track.live %>
+                                    <%= " (live)" %>
+                                <% end %>
+                            </li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </ul>
+    <% end %>
+</ul>

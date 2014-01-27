@@ -5,6 +5,4 @@ class Artist < ActiveRecord::Base
 
   has_many :tracks, through: :albums
 
-  end
-
 end
